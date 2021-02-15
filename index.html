@@ -44,5 +44,12 @@
   <script src="//cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-cmake.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-c.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-cpp.min.js"></script>
+
+  <!-- Register Offline Caching Service Worker -->
+  <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js')
+    }
+  </script>
 </body>
 </html>
