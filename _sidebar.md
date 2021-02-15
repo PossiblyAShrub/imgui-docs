@@ -1,6 +1,7 @@
 
  * [Home](/)
  * [FAQ](faq)
+ * [Glossary](_glossary)
  * [Getting Started](getting-started)
    * [Building](getting-started/building)
    * [Integrating](getting-started/integrating)
