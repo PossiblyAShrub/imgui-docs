@@ -23,13 +23,13 @@ applicable backend files is recommended.
 
 ## Structure of a Dear ImGui Program
 
-As Dear ImGui is an implementation of the [IMGUI paradigm]() it relies heavily on the concept of an [event loop](). Below, you 
-can find pseudo code for an event loop based program integrating Dear ImGui. This is not code you can copy/paste, and will
-differ slightly based upon the backends which you are using.
+Below, you can find pseudo code for an [event loop]() based program integrating Dear ImGui. This is not code you can copy/paste, 
+and will differ slightly based upon the backends which you are using. However is serves as a basic structure which is
+ubiquitous throughout all example programs.
 
 ?> **It is recommended that you look at the [examples](https://github.com/ocornut/imgui/tree/master/examples)** to see the 
-   usage of your backend functions. All example programs will follow the below pattern. To read more about the examples,
-   see the [examples docs](https://github.com/ocornut/imgui/blob/master/docs/EXAMPLES.md)
+   usage of your backend functions. To read more about the examples, see the
+   [examples docs](https://github.com/ocornut/imgui/blob/master/docs/EXAMPLES.md)
 
 ```cpp
 void main()
@@ -90,7 +90,7 @@ which Dear ImGui boilerplate must occur:
 Example (using [backends/imgui_impl_win32.cpp](https://github.com/ocornut/imgui/blob/master/backends/imgui_impl_win32.cpp) + [backends/imgui_impl_dx11.cpp](https://github.com/ocornut/imgui/blob/master/backends/imgui_impl_dx11.cpp)):
 
 ```cpp
-    // Create a Dear ImGui context, setup some options
+// Create a Dear ImGui context, setup some options
 ImGui::CreateContext();
 ImGuiIO& io = ImGui::GetIO();
 io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard; // Enable some options
