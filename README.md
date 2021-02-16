@@ -1,7 +1,7 @@
 # Dear ImGui Documentation Site
 
 This is an attempt at creating higher level documentation for the wonderful
-Dear ImGui library. [Demo here.]()
+Dear ImGui library. [Demo here.](https://possiblyashrub.github.io/imgui-docs/#/)
 
 I've also started working on a getting started guide, however it is still
 very much a WIP.
@@ -12,7 +12,8 @@ documentation generator, and runs entirely on the client side.
 (There is no 'build docs' step)
 
 It can be hosted with any static hosting tool pointing to the root directory.
-For example, there is a [live demo]() hosted with github pages.
+For example, there is a [live demo](https://possiblyashrub.github.io/imgui-docs/#/)
+hosted with github pages.
 
 Locally one can use any http(s) static server tools for development.
 See a list [oneliners using common tools here](https://gist.github.com/willurd/5720255)
