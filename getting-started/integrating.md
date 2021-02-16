@@ -1,18 +1,22 @@
 # Integrating Dear ImGui in a New or Existing application
 
-You should now be able to successfully build Dear ImGui. The next step is correctly integrating it with your app/game.
+You should now be able to successfully build Dear ImGui. The next step is correctly integrating it with your app/game. This
+involves the use of backends. For brevity we will not do in depth with backends in this article. However, if you are not sure
+as to:
 
-In the file in which you will be handling Dear ImGui boilerplate; we must include `imgui.h` and the header files for your 
-backend.
+ - What backends are
+ - How backends work
+ - Which backends you should use
+
+Then please read the [primer on backends](reference/backends).
+
+First, in the file in which you will be handling Dear ImGui boilerplate; we must include `imgui.h` and the header files for your 
+backend(s).
 
 ```cpp
 #include <imgui.h>
-#include <impl_imgui_XXXX.h> // where XXXX = SDL, GLFW, Win32, ...
-#include <impl_imgui_XXXX.h> // where XXXX = OpenGL3, Vulkan, DirectX12, ...
+#include <impl_imgui_XXXX.h> // One of these for each of your backend header files
 ```
-
-These files declare the necessary boilerplate functions for your project. They are well commented, and a read through of your
-applicable backend files is recommended.
 
 !> If you encounter errors regarding your compiler being unable to find any of the above files please make sure you've
    properly configured your include directories as specified in the
@@ -21,52 +25,6 @@ applicable backend files is recommended.
 !> Also note, IDE's can easily get confused and emit false positive errors in regards to include directories. When in doubt
    attempt a build, and your compiler will complain if there's actually an error.
 
-## Structure of a Dear ImGui Program
-
-Below, you can find pseudo code for an [event loop]() based program integrating Dear ImGui. This is not code you can copy/paste, 
-and will differ slightly based upon the backends which you are using. However is serves as a basic structure which is
-ubiquitous throughout all example programs.
-
-?> **It is recommended that you look at the [examples](https://github.com/ocornut/imgui/tree/master/examples)** to see the 
-   usage of your backend functions. To read more about the examples, see the
-   [examples docs](https://github.com/ocornut/imgui/blob/master/docs/EXAMPLES.md)
-
-```cpp
-void main()
-{
-    // init windowing & rendering libraries (independent of Dear ImGui)
-
-    // init Dear ImGui
-    ImGui::CreateContext()
-    ImGui_ImplXXXX_InitForXXX(...) // windowing lib
-    ImGui_ImplXXXX_Init(....) // then rendering lib second
-
-    // Dear ImGui configuration -- see configuration subsection below
-
-    while (running)
-    {
-        // always poll events before ImGui::NewFrame
-        pollEvents()
-
-        // Start the Dear ImGui frame
-        ImGui_ImplXXXX_NewFrame()
-        ImGui_ImplXXXX_NewFrame()
-        ImGui::NewFrame()
-
-        // ImGui::XXX widget functions
-
-        ImGui::Render()
-        ImGui_ImplXXXX_RenderDrawData(ImGui::GetDrawData())
-    }
-
-    // Cleanup
-    ImGui_ImplXXXX_Shutdown() // rendering lib
-    ImGui_ImplXXXX_Shutdown() // then windowing lib second
-    ImGui::DestroyContext()
-
-    // cleanup functions for windowing & rendering libraries
-}
-```
 
 Integration in a typical existing application, should take <20 lines when using standard backends. Note the four key points in
 which Dear ImGui boilerplate must occur:
@@ -87,48 +45,30 @@ which Dear ImGui boilerplate must occur:
  - call `ImGui_ImplXXXX_Shutdown()` for each backend.
  - call `ImGui::DestroyContext()`
 
-Example (using [backends/imgui_impl_win32.cpp](https://github.com/ocornut/imgui/blob/master/backends/imgui_impl_win32.cpp) + [backends/imgui_impl_dx11.cpp](https://github.com/ocornut/imgui/blob/master/backends/imgui_impl_dx11.cpp)):
+For example, in a standard `while (running)` event loop:
 
 ```cpp
-// Create a Dear ImGui context, setup some options
-ImGui::CreateContext();
-ImGuiIO& io = ImGui::GetIO();
-io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard; // Enable some options
-
-// Initialize Platform + Renderer backends (here: using imgui_impl_win32.cpp + imgui_impl_dx11.cpp)
-ImGui_ImplWin32_Init(my_hwnd);
-ImGui_ImplDX11_Init(my_d3d_device, my_d3d_device_context);
-
-// Application main loop
-while (true)
+int main()
 {
-    // Beginning of frame: update Renderer + Platform backend, start Dear ImGui frame
-    ImGui_ImplDX11_NewFrame();
-    ImGui_ImplWin32_NewFrame();
-    ImGui::NewFrame();
+    // initialization
 
-    // Any application code here
-    ImGui::Text("Hello, world!");
+    while (running)
+    {
+        // beginning of frame
 
-    // End of frame: render Dear ImGui
-    ImGui::Render();
-    ImGui_ImplDX11_RenderDrawData(ImGui::GetDrawData());
+        // Dear ImGui API calls
+        ImGui::ShowDemoWindow();
 
-    // Swap
-    g_pSwapChain->Present(1, 0);
+        // end of frame
+    }
+
+    // shutdown
 }
-
-// Shutdown
-ImGui_ImplDX11_Shutdown();
-ImGui_ImplWin32_Shutdown();
-ImGui::DestroyContext();
 ```
 
-?> Please read 'PROGRAMMER GUIDE' in imgui.cpp for notes on how to setup Dear ImGui in your codebase.
-
-?> Please read the comments and instruction at the top of each file.
-
-?> Please read FAQ at http://www.dearimgui.org/faq
+For brevity we will not list the function signatures for every backend combination. You will have to find an
+[example project](https://github.com/ocornut/imgui/tree/master/examples) which uses your combination of backends.
+These projects contain the canonical usage of the standard backends, and are thoroughly commented.
 
 ## Dear ImGui Configuration Options
 
@@ -138,7 +78,7 @@ Right after calling `ImGui::CreateContext()` it is canonical to:
  - Set style options
  - Load fonts
 
-To learn all about loading fonts please see the [font docs](https://github.com/ocornut/imgui/blob/master/docs/FONTS.md).
+To learn all about loading fonts please see the [font reference](reference/fonts).
 
 #### Setting configuration flags
 
@@ -183,7 +123,7 @@ Or, you have not correctly set up your windowing library.
 
 There are two reasons as to why this maybe:
 
- 1. You aren't actually calling any widget functions see the [basic usage]() section for more.
+ 1. You aren't actually calling any widget functions see the [basic usage](getting-started/usage) section for more.
  2. You aren't properly calling the render functions
  
 **Make sure to carefully compare your code to that of the [examples](https://github.com/ocornut/imgui/tree/master/examples).**
@@ -191,4 +131,4 @@ There are two reasons as to why this maybe:
 #### Q: My fonts aren't appearing correctly
 
 Font's are a large topic on their own. In the case of any errors regarding fonts please see the
-[fonts documentation](https://github.com/ocornut/imgui/blob/master/docs/FONTS.md).
+[fonts documentation](reference/fonts).

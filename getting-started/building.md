@@ -10,6 +10,7 @@ application/engine. They are all the files in the root folder of the repository
 
 And, you will need to compile the applicable backend files.
 (Located in [backends/imgui_impl_XXX.cpp](https://github.com/ocornut/imgui/tree/master/backends))
+**You can read all about [backends here](/reference/backends)**.
 
 ## Obtaining the Source Code
 
@@ -68,7 +69,7 @@ resulting vertices.
 only recommended for advanced users.
 
 ?> This is a very high level overview of backends. For the curious, see the
-   [backend documentation](https://github.com/ocornut/imgui/blob/master/docs/BACKENDS.md) - which is much more in depth.
+   [backend reference](reference/backends) - which is much more in depth.
 
 **Each backend contains a `.cpp` file that will need to be built alongside Dear ImGui.**
 
