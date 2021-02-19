@@ -2,6 +2,8 @@
 
 **The core of Dear ImGui is self-contained within a few platform-agnostic files** which you can easily compile in your
 application/engine. They are all the files in the root folder of the repository
+ - imgui.h
+ - imgui_internal.h
  - imgui.cpp
  - imgui_demo.cpp
  - imgui_draw.cpp
