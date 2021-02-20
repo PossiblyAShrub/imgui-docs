@@ -8,7 +8,7 @@ as to:
  - How backends work
  - Which backends you should use
 
-Then please read the [primer on backends](reference/backends).
+Then please read the [primer on backends](../reference/backends.md).
 
 First, in the file in which you will be handling Dear ImGui boilerplate; we must include `imgui.h` and the header files for your 
 backend(s).
@@ -78,7 +78,7 @@ Right after calling `ImGui::CreateContext()` it is canonical to:
  - Set style options
  - Load fonts
 
-To learn all about loading fonts please see the [font reference](reference/fonts).
+To get help with fonts please see the [font reference](../reference/fonts.md).
 
 #### Setting configuration flags
 
@@ -109,7 +109,7 @@ integrating Dear ImGui.
 
 **You have not properly built/linked Dear ImGui with you application.**
 
-Please review the [building section](getting-started/building) and ensure you've followed *all* of the steps without error.
+Please review the [building section](./building.md) and ensure you've followed *all* of the steps without error.
 
 #### Q: My Application is not responding to user input
 
@@ -123,7 +123,7 @@ Or, you have not correctly set up your windowing library.
 
 There are two reasons as to why this maybe:
 
- 1. You aren't actually calling any widget functions see the [basic usage](getting-started/usage) section for more.
+ 1. You aren't actually calling any widget functions see the [basic usage](./usage.md) section for more.
  2. You aren't properly calling the render functions
  
 **Make sure to carefully compare your code to that of the [examples](https://github.com/ocornut/imgui/tree/master/examples).**
@@ -131,4 +131,4 @@ There are two reasons as to why this maybe:
 #### Q: My fonts aren't appearing correctly
 
 Font's are a large topic on their own. In the case of any errors regarding fonts please see the
-[fonts documentation](reference/fonts).
+[fonts documentation](../reference/fonts.md).

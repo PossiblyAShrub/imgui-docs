@@ -8,4 +8,4 @@ Dear ImGui is particularly suited to integration in games engine (for tooling), 
 
 ---
 
-If you've never used Dear ImGui before, we recommend that you follow the [get started guide](/getting-started).
+If you've never used Dear ImGui before, we recommend that you follow the [get started guide](getting-started.md).

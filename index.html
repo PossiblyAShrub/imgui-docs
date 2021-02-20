@@ -20,16 +20,15 @@
       onlyCover: true,
       coverpage: ['/'],
 
-      loadSidebar: true,
+      relativePath: true,
       alias: {
         '/.*/_sidebar.md': '/docs/1.81/_sidebar.md',
         '/docs/latest/(.*)': '/docs/1.81/$1',
-        '/foo/(.*)': '/bar/$1',
-        // '/*': '/docs/1.81/$1',
-        // '/home': '/docs/1.81/home.md'
       },
 
+      loadSidebar: true,
       subMaxLevel: 2,
+
       pagination: {
         previousText: 'previous',
         nextText: 'next',
@@ -55,9 +54,9 @@
 
   <!-- Register Offline Caching Service Worker -->
   <script>
-    // if (typeof navigator.serviceWorker !== 'undefined') {
-    //   navigator.serviceWorker.register('sw.js')
-    // }
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js')
+    }
   </script>
 </body>
 </html>

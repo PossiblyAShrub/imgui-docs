@@ -12,7 +12,7 @@ application/engine. They are all the files in the root folder of the repository
 
 And, you will need to compile the applicable backend files.
 (Located in [backends/imgui_impl_XXX.cpp](https://github.com/ocornut/imgui/tree/master/backends))
-**You can read all about [backends here](/reference/backends)**.
+**You can read all about [backends here](../reference/backends.md)**.
 
 A few other files included in the repository are:
  - examples/ -- Complete example projects for various platforms
@@ -98,10 +98,10 @@ And then each example has a README file with config & build instructions. Please
 ?> If you want to use a build tool such as premake, cmake, or GN etc. Please see the [list of third party build tools support](https://github.com/ocornut/imgui/wiki/Home2#building).
 
 Once you have an example project running:
- - [I want to learn how to embed Dear ImGui in my existing application](getting-started/a-note-about-backends), or
- - [The example is enough, I want to learn how to use Dear ImGui](getting-started/usage)
+ - [I want to learn how to embed Dear ImGui in my existing application](#a-note-about-backends), or
+ - [The example is enough, I want to learn how to use Dear ImGui](./usage.md)
 
-From here on, until [usage](getting-started/usage), this guide will assume you want to embed Dear ImGui in your existing project.
+From here on, until [usage](./usage.md), this guide will assume you want to embed Dear ImGui in your existing project.
 
 ## A Note about Backends
 
@@ -113,11 +113,11 @@ resulting vertices.
 **Backends for a variety of graphics api and rendering platforms** are provided in the
 [backends/](https://github.com/ocornut/imgui/tree/master/backends) folder, along with example applications displaying their usage in the
 [examples/](https://github.com/ocornut/imgui/tree/master/examples) folder. See the section on
-[Integration](getting-started/integrating) for details. You may also create your own backend, if necessary. However, this is
+[Integration](./getting-started/integrating) for details. You may also create your own backend, if necessary. However, this is
 only recommended for advanced users.
 
 ?> This is a very high level overview of backends. For the curious, see the
-   [backend reference](reference/backends) - which is much more in depth.
+   [backend reference](../reference/backends.md) - which is much more in depth.
 
 **Each backend contains a `.cpp` file that will need to be built alongside Dear ImGui.**
 
@@ -125,10 +125,10 @@ only recommended for advanced users.
 
 **No specific build process is required**. You can add the .cpp files to your existing project. Or you can build your project
 based off of the numerous prebuilt [example/starter projects](https://github.com/ocornut/imgui/tree/master/examples).
-Remember, that must include **all** of the `*cpp` files listed at the [beginning](getting-started/building) of this guide. **And** it must include
+Remember, that must include **all** of the `*cpp` files listed at the [beginning](./building.md) of this guide. **And** it must include
 your backend's `*.cpp` files.
 
-*If you are already comfortable compiling 3rd party libraries feel free to skip to the [next section]()*
+*If you are already comfortable compiling 3rd party libraries feel free to skip to the [next section](./integrating.md)*
 
 However, to accommodate everyone, we've included step-by-step instructions for several common build systems.
 

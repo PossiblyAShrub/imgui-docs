@@ -11,4 +11,4 @@ However, **we encourage all new users to thoroughly read this guide.** Especiall
 [thorough questions](https://bit.ly/3nwRnx1) on the [issue tracker](https://github.com/ocornut/imgui/issues) or
 [discord server](http://discord.dearimgui.org/).
 
-First, let's start with [Obtaining and building the Dear ImGui source](getting-started/building).
+First, let's start with [Obtaining and building the Dear ImGui source](getting-started/building.md).

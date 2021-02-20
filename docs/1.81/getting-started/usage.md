@@ -12,7 +12,7 @@ ImGui::ShowDemoWindow();
 ```
 
 This should display the demo window. If you encounter any errors, please see
-[common issues](getting-started/integrating#common-issues).
+[common issues](./integrating.md#common-issues).
 
 The demo window **is incredibly helpful for both the developers and users of Dear ImGui**. This is because it acts as
 an interactive guide and in-app documentation of the entire library. Also, all of the code is under `imgui_demo.cpp`, with 
@@ -39,7 +39,7 @@ the same, then the windows will concatenate.
 !> Note: The call to `ImGui::End` *must* occur outside of the if statement
 
 ?> Dear ImGui uses id's to differentiate between unique widgets.
-   [Read more about id's here](reference/faq#q-why-is-my-widget-not-reacting-when-i-click-on-it).
+   [Read more about id's here](../reference/faq.md#q-why-is-my-widget-not-reacting-when-i-click-on-it).
 
 Any calls to widget functions occur within the if statement's body. Here we draw a Text widget, in order for it to always be 
 visible, we must call it every frame. Because of this, we can do the following:
@@ -60,7 +60,7 @@ for (int i = 0; i < 10; i++)
 
 Notice that with an immediate mode graphical user interface (IMGUI) there are no delete functions. To stop showing a widget
 simply don't call it in the first place. To learn more about what the IMGUI paradigm even is see
-[About the IMGUI paradigm](reference/imgui-paradigm).
+[About the IMGUI paradigm](../reference/imgui-paradigm.md).
 
 That's all that you need to know to get started with Dear ImGui. **Remember to use the Demo Window as a reference for all of**
 **Dear ImGui's provided widgets, and their usage.**
