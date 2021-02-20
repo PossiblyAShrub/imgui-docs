@@ -4,7 +4,7 @@
 
 > Bloat-free Graphical User interface for C++ with minimal dependencies
 
-[Docs](/home)
-[Get Started](/getting-started)
+[Docs](/docs/latest/home.md)
+[Get Started](/docs/latest/getting-started.md)
 
 ![color](#fff)

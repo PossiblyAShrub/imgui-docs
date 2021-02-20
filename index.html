@@ -14,6 +14,7 @@
   <script>
     window.$docsify = {
       name: 'Dear ImGui',
+      nameLink: '/',
       repo: 'https://github.com/ocornut/imgui/',
 
       onlyCover: true,
@@ -21,7 +22,11 @@
 
       loadSidebar: true,
       alias: {
-        '/.*/_sidebar.md': '/_sidebar.md'
+        '/.*/_sidebar.md': '/docs/1.81/_sidebar.md',
+        '/docs/latest/(.*)': '/docs/1.81/$1',
+        '/foo/(.*)': '/bar/$1',
+        // '/*': '/docs/1.81/$1',
+        // '/home': '/docs/1.81/home.md'
       },
 
       subMaxLevel: 2,
@@ -50,9 +55,9 @@
 
   <!-- Register Offline Caching Service Worker -->
   <script>
-    if (typeof navigator.serviceWorker !== 'undefined') {
-      navigator.serviceWorker.register('sw.js')
-    }
+    // if (typeof navigator.serviceWorker !== 'undefined') {
+    //   navigator.serviceWorker.register('sw.js')
+    // }
   </script>
 </body>
 </html>
