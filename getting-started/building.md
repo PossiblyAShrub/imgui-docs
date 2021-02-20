@@ -55,6 +55,22 @@ add_exutable(<my-target> ... ${IMGUI_SOURCES})
 target_link_libraries(<my-target> ... imgui ...)
 ```
 
+### **Github Web Download**
+
+Github allows users to *Download as Zip*. While it is generally recommended that you use a package management solution, this is a
+viable way of obtaining Dear ImGui Source.
+
+First, click the green `Download Code` button.
+
+![Download Code Button](../resources/images/getting-started/get-code-github-zip-step1.png)
+
+Then, click the `Download ZIP` button.
+
+![Download Zip Button](../resources/images/getting-started/get-code-github-zip-step2.png)
+
+The download will now begin in your browser. As it is a ZIP file you will have to extract it's contents and move them into your
+project.
+
 <!-- tabs:end -->
 
 ## A Note about Backends
