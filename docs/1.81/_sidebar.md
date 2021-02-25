@@ -11,3 +11,4 @@
    - [Building](/docs/latest/getting-started/building.md)
    - [Integrating](/docs/latest/getting-started/integrating.md)
    - [Basic Usage](/docs/latest/getting-started/usage.md)
+ - [**Interactive Manual**](https://pthom.github.io/imgui_manual_online/manual/imgui_manual.html)

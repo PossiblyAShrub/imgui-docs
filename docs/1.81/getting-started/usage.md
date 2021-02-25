@@ -62,5 +62,7 @@ Notice that with an immediate mode graphical user interface (IMGUI) there are no
 simply don't call it in the first place. To learn more about what the IMGUI paradigm even is see
 [About the IMGUI paradigm](../reference/imgui-paradigm.md).
 
-That's all that you need to know to get started with Dear ImGui. **Remember to use the Demo Window as a reference for all of**
-**Dear ImGui's provided widgets, and their usage.**
+**Remember to use the Demo Window as a reference for all of Dear ImGui's provided widgets, and their usage.**
+
+?> Note: There is an [online interactive manual](https://pthom.github.io/imgui_manual_online/manual/imgui_manual.html),
+   which will display the demo code alongside the demo window.
