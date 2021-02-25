@@ -8,8 +8,6 @@ In the [misc/fonts/](https://github.com/ocornut/imgui/tree/master/misc/fonts) fo
 
 **Read the FAQ:** https://www.dearimgui.org/faq (there is a Fonts section!)
 
-**Use the Discord server**: http://discord.dearimgui.org and not the GitHub issue tracker for basic font loading questions.
-
 ## Index
 - [Readme First](#readme-first)
 - [How should I handle DPI in my application?](#how-should-i-handle-dpi-in-my-application)

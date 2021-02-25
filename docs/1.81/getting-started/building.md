@@ -158,4 +158,4 @@ yet.
 
 If you encounter any errors throughout this process, please make sure you've followed every step exactly as described.
 And if you still encounter errors, please ask a [thorough question](https://bit.ly/3nwRnx1) in the
-[discord server](http://discord.dearimgui.org/) or [issue tracker](https://github.com/ocornut/imgui/issues).
+[issue tracker](https://github.com/ocornut/imgui/issues).

@@ -8,7 +8,6 @@ This is a guide on getting started with Dear ImGui. It is split into 3 sections:
 
 Depending on your C++ and/or general programming skills, you may be able to skip certain sections/subsections.
 However, **we encourage all new users to thoroughly read this guide.** Especially before asking
-[thorough questions](https://bit.ly/3nwRnx1) on the [issue tracker](https://github.com/ocornut/imgui/issues) or
-[discord server](http://discord.dearimgui.org/).
+[thorough questions](https://bit.ly/3nwRnx1) on the [issue tracker](https://github.com/ocornut/imgui/issues).
 
 First, let's start with [Obtaining and building the Dear ImGui source](getting-started/building.md).
