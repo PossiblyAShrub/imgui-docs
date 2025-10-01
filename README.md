@@ -1,3 +1,5 @@
+> Notice of archival. These docs have not been updated in years, I have decided to archive the project as it is no longer up-to-date with Dear ImGui.
+
 # Dear ImGui Documentation Site
 
 This is an attempt at creating higher level documentation for the wonderful
